@@ -2,17 +2,18 @@
 #include <stdlib.h>
 int main()
 {
-	int mas[100] = {0};
-	int i,num,a,max=0,last_pos=0,sum=0;
+	int mas[100] = { 0 };
+	int i, num, a,n;
 	printf("input number of numbers in arrey");
-	scanf_s("%d",&num);
-	if (num < 1 || num>100 || num % 1 != 0)
+	scanf_s("%d", &num);
+	if (num < 1 || num>100 || num%1 != 0)
 	{
 		printf("wrong input");
 		return 0;
 	}
 	printf("press 1 to input random numbers \n press 2 to input numbers yourself");
-	scanf_s("%d",&a);
+	scanf_s("%d", &a);
+	n = num;
 	switch (a)
 	{
 	case 1:
@@ -43,20 +44,19 @@ int main()
 	}
 	for (i = 0; i < num; i++)
 	{
-		if (mas[i] > max)
-			max = mas[i];
+		if (mas[i] < 0)
+		{
+			num = num + 1;
+			for (int end=n*2;end >= i; end--)
+			{
+				mas[end+1] = mas[end];
+			}
+			i = i + 1;
+		}
 	}
 	for (i = 0; i < num; i++)
 	{
-		if (mas[i] > 0)
-		{
-			last_pos = i;
-		}
+		printf("%d \n",mas[i]);
 	}
-	for (i = 0; i < last_pos;i++)
-	{
-		sum = sum + mas[i];
-	}
-	printf("%d, %d", max,sum);
 	return 0;
 }
