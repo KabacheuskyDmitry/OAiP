@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\slkab\source\repos\lab5-2\lab5-2\Source.c(38,46): warning C4047: =: "int" отличается по уровням косвенного обращения от "int *"
+C:\Users\slkab\source\repos\lab5-2\lab5-2\Source.c(64,46): warning C4047: =: "int" отличается по уровням косвенного обращения от "int *"
+C:\Users\slkab\source\repos\lab5-2\lab5-2\Source.c(7,12): warning C4101: row: неиспользованная локальная переменная
+C:\Users\slkab\source\repos\lab5-2\lab5-2\Source.c(7,36): warning C4101: buffer: неиспользованная локальная переменная
+  lab5-2.vcxproj -> C:\Users\slkab\source\repos\lab5-2\Debug\lab5-2.exe
